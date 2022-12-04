@@ -1,48 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template Project</title>
+  <title>Weather</title>
   <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
   <link rel="stylesheet" href="./css/main.css">
   <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
 </head>
-<body>
-  <!-- SITE HEADER START -->
-  <header class="site-header">
-    <div class="container">
 
-    </div>
-  </header>
-  <!-- SITE HEADER END -->
+<body>
+
   <!-- SITE MAIN START -->
   <main>
     <!-- SECTION START -->
-    <section>
+    <section class="weather">
+      <h1 class="visually-hidden">Weather</h1>
+      <!-- <div class="container"> -->
       <div class="container">
+        <div class="weather-wrap">
+          <ul class="weather-list">
 
+          </ul>
+          <form class="weather-form">
+            <input class="weather-form__input" placeholder="Enter your country" type="text" name="user_country"
+              aria-label="Enter your country">
+          </form>
+          <div class="weather-box-wrap">
+            <div class="weather-box">
+              <template class="weather-box-template">
+                <div class="weather-box__degree-box">
+                  <p class="weather-box__degree"></p>
+                  <img class="weather-box__img" src="" alt="">
+                </div>
+                <p class="weather-box__name">Country:<span class="weather-box__name-span"></span></p>
+                <p class="weather-box__speed">Speed:<span class="weather-box__speed-span"></span></p>
+                <p class="weather-box__country"></p>
+              </template>
+            </div>
+            <ul class="all-list">
+
+            </ul>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
     <!-- SECTION END -->
-    <!-- SECTION START -->
-    <section>
-      <div class="container">
+    <template class="weather-template">
+      <li class=" weather-list__item">
+        <div class="weather-list__box">
+          <p class="weather-list__degree"></p>
+          <img class="weather-list__img" src="" alt="">
+        </div>
+        <p class="weather-list__name"></p>
+        <p class="weather-list__clouds"></p>
+        <p class="weather-list__country"></p>
 
-      </div>
-    </section>
-    <!-- SECTION END -->
-  </main>
-  <!-- SITE MAIN END-->
+      </li>
+    </template>
 
-  <!-- SITE FOOTER START -->
-  <footer class="site-footer">
-    <div class="container">
+    <template class="all-template">
+      <li class="all-list__item">
+        <p class="all-list__time"></p>
 
-    </div>
-  </footer>
-  <!-- SITE FOOTER END -->
+        <img class="all-list__img" src="" alt="">
+        <p class="all-list__degree"></p>
+        <p class="all-list__main"></p>
+      </li>
+    </template>
 
+    <script src="./main.js"></script>
 </body>
+
 </html>
+
+
